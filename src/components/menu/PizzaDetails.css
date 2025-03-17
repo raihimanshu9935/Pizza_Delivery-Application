@@ -1,0 +1,283 @@
+.pizza-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: 2px solid #ff4d4d;
+  border-radius: 20px;
+  color: #ff4d4d;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+.pizza-details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-details-image {
+  position: relative;
+  height: 500px;
+}
+
+.pizza-details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pizza-details-info {
+  padding: 2rem;
+}
+
+.pizza-details-info h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ingredients-section {
+  margin-bottom: 2rem;
+}
+
+.ingredients-section h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.ingredients-section ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.ingredients-section li {
+  color: #666;
+  padding: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.customization-section {
+  margin-bottom: 2rem;
+}
+
+.size-selection,
+.crust-selection {
+  margin-bottom: 1.5rem;
+}
+
+.size-selection h3,
+.crust-selection h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.option-btn {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: none;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.option-btn.selected {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+}
+
+.option-btn:hover {
+  border-color: #ff4d4d;
+}
+
+.option-btn span {
+  font-size: 0.8rem;
+  color: #ff4d4d;
+}
+
+.nutritional-info {
+  margin-bottom: 2rem;
+}
+
+.nutritional-info h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.nutrition-item {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nutrition-item span:first-child {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.nutrition-item span:last-child {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.add-to-cart-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.price-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price-display span:first-child {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.price-display .price {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #ff3333;
+  transform: scale(1.05);
+}
+
+.notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  animation: slideIn 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 968px) {
+  .pizza-details-content {
+    grid-template-columns: 1fr;
+  }
+
+  .pizza-details-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pizza-details-container {
+    padding: 1rem;
+  }
+
+  .pizza-details-info h1 {
+    font-size: 2rem;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .add-to-cart-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .price-display {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

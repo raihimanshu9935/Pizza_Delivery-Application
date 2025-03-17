@@ -1,0 +1,287 @@
+.order-tracking-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+}
+
+.order-tracking-container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.estimated-time {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.estimated-time h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.estimated-time .time {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff416c;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tracking-progress {
+  margin-bottom: 3rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.tracking-step {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  background: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step-content {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.step-content h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.step-content p {
+  margin: 0.5rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.step-connector {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background: #eee;
+}
+
+.tracking-step.completed .step-icon {
+  background: #4caf50;
+  color: white;
+}
+
+.tracking-step.completed .step-connector {
+  background: #4caf50;
+}
+
+.tracking-step.in-progress .step-icon {
+  background: #2196f3;
+  color: white;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.order-details {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.order-details h2 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row span:first-child {
+  color: #666;
+}
+
+.info-row span:last-child {
+  color: #333;
+  font-weight: 500;
+}
+
+.order-items {
+  margin-bottom: 2rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-info h4 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.item-info p {
+  margin: 0.2rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  text-align: right;
+}
+
+.item-price span {
+  display: block;
+  color: #333;
+}
+
+.item-price span:first-child {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.order-total {
+  border-top: 2px solid #eee;
+  padding-top: 1rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.total-row span:last-child {
+  color: #ff416c;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.track-map-button,
+.support-button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.track-map-button {
+  background: #ff416c;
+  color: white;
+}
+
+.support-button {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.track-map-button:hover {
+  background: #ff1f4b;
+  transform: translateY(-2px);
+}
+
+.support-button:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .order-tracking-page {
+    padding: 1rem;
+  }
+
+  .order-tracking-container {
+    padding: 1.5rem;
+  }
+
+  .estimated-time .time {
+    font-size: 2.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .order-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .item-price {
+    text-align: left;
+  }
+}
